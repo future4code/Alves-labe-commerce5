@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Header } from './components/header/Header';
+import { Footer } from './components/footer/Footer';
+import { Filtro } from './components/filtro/Filtro';
+import { Carrinho } from './components/carrinho/Carrinho';
+import { Lista } from './components/lista/Lista';
 
 const Principal = styled.div`
   display: grid;
@@ -9,47 +14,13 @@ const Principal = styled.div`
   box-sizing: border-box;
 `
 
-const Header = styled.div`
-  display: flex;
-  background-color: black;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  padding: 0 20px;
-  grid-column: 1/-1;
-`
-
-const Footer = styled.div`
-  display: flex;
-  background-color: mediumvioletred;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  grid-column: 1/-1;
-`
-
-const Nav = styled.div`
-  background-color: #f2d0e0;
-  padding: 10px 10px 10px 20px;
-`
-
-const Main = styled.div`
-  background-color: gray;
-  padding: 10px 10px 10px 20px;
-`
-
-const Carrinho = styled.div`
-  background-color: blue;
-  padding: 10px 10px 10px 20px;
-`
-
 export default class App extends Component {
   render () {
     return (
       <Principal>
         <Header />
-        <Nav />
-        <Main />
+        <Filtro />
+        <Lista />
         <Carrinho />
         <Footer />
       </Principal>
