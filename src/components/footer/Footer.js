@@ -24,6 +24,7 @@ const TextoLogoGeral = styled.h4`
   @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
   font-family: 'Comfortaa', cursive;
   margin: 0 0 0 20px;
+  height: 50px;
 `
 
 const TextoLogo1 = styled.h4`
