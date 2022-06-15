@@ -11,7 +11,7 @@ const Principal = styled.div`
 
 const Header = styled.div`
   display: flex;
-  background-color: mediumvioletred;
+  background-color: black;
   justify-content: space-between;
   align-items: center;
   height: 60px;
