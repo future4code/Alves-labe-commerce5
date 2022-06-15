@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const MenuEsquerda = styled.div`
-  background-color: red;
+  background-color: brown;
   padding: 10px 10px 10px 20px;
 `
 
