@@ -10,7 +10,7 @@ const Principal = styled.div`
   display: grid;
   min-height: 100vh;
   grid-template-rows: 60px 1fr 60px;
-  grid-template-columns: 250px 1fr 250px;
+  grid-template-columns: 225px 1fr 250px;
   box-sizing: border-box;
 `
 

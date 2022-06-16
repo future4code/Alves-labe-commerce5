@@ -37,7 +37,7 @@ const TextoLogo2 = styled.h4`
   margin: 0 0 0 2px;
 `
 
-const TextoCentral = styled.h4`
+const TextoCentral = styled.p`
 `
 
 const SigamNos = styled.div`
