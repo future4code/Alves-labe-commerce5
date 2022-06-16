@@ -2,24 +2,38 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const MenuEsquerda = styled.div`
-  background-color: brown;
-  padding: 10px 10px 10px 20px;
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: yellow;
+`
+
+const Titulos = styled.p`
+  margin: 0 0 5px 0;
+`
+
+const Entrada = styled.input`
+  border: 1px solid blue;
+  height: 25px;
+  margin: 0 0 20px 0;
 `
 
 export class Filtro extends Component {
   render() {
     return (
       <MenuEsquerda>
-        <h2>FILTRO</h2>
+        <h3>Filtragem</h3>
         <div>
-          <p>Valor mínimo:</p>
-          <input type="Number"/>
+          <Titulos>Valor mínimo:</Titulos>
+          <Entrada type="Number"/>
 
-          <p>Valor máximo:</p>
-          <input type="Number"/>
+          <Titulos>Valor máximo:</Titulos>
+          <Entrada type="Number"/>
 
-          <p>Busca por nome:</p>
-          <input type="text"/>
+          <Titulos>Busca por nome:</Titulos>
+          <Entrada type="text"/>
         </div>
       </MenuEsquerda>
     )
