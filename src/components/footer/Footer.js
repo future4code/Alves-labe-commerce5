@@ -7,7 +7,7 @@ import youtube from "./../img/youtube.png";
 
 const Rodape = styled.div`
   display: flex;
-  background-color: orange;
+  background-color: #005288;
   justify-content: space-between;
   align-items: center;
   grid-column: 1/-1;
@@ -28,16 +28,19 @@ const TextoLogoGeral = styled.h4`
 `
 
 const TextoLogo1 = styled.h4`
-  background-color: red;
+  background-color: #a7a9ac;
   padding: 5px 0 5px 5px;
   border-radius: 10px;
 `
 
 const TextoLogo2 = styled.h4`
-  margin: 0 0 0 2px;
+  margin: 0 0 0 5px;
+  color: #a7a9ac;
+  font-family: 'Courier New', Courier, monospace;
 `
 
 const TextoCentral = styled.p`
+color: #a7a9ac;
 `
 
 const SigamNos = styled.div`
@@ -55,6 +58,7 @@ const Redes = styled.div`
 const TextoSigam = styled.p`
   text-left: center;
   margin: 0 0 3px 0;
+  color: #a7a9ac;
 `
 
 export class Footer extends Component {

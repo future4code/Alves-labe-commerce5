@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
 const Cabecalho = styled.div`
   display: flex;
   align-items: center;
@@ -12,7 +11,7 @@ const Box1 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: #a7a9ac;
   flex-basis: 225px;
   height: 100%;
   border: 1px solid black;
@@ -22,7 +21,7 @@ const Box2 = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: #005288;
   flex-grow: 1;
   height: 100%;
 `
@@ -30,7 +29,7 @@ const Box2 = styled.nav`
 const Box3 = styled.div`
   display: flex;
   justify-content: center;
-  background-color: orange;
+  background-color: #a7a9ac;
   flex-basis: 225px;
   height: 100%;
 `
@@ -54,22 +53,22 @@ const MenuLi = styled.nav`
 
 const Menua = styled.a`
   text-decoration: none;
-  color: black;
+  color: #a7a9ac;
   padding: 15px;
   font-size: 24px;
 `
 
 const MenuaLogar = styled.a`
   text-decoration: none;
-  color: black;
+  color: #005288;
   font-size: 22px;
 `
 
 const MenuaLogarRegistrar = styled.a`
   text-decoration: none;
-  color: black;
+  color: #a7a9ac;
   font-size: 22px;
-  background-color: red;
+  background-color: #005288;
   border-radius: 20px;
   padding: 7px;
 `
@@ -80,7 +79,7 @@ export class Header extends Component {
       <Cabecalho>
 
         <Box1>
-          ADICIONAR LOGO
+          ADICIONAR LOGO 
         </Box1>
 
         <Box2>

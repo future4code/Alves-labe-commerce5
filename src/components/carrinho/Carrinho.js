@@ -5,7 +5,7 @@ const MenuDireita = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: whitesmoke;
 
 `
 
