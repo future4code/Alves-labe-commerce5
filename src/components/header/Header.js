@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import LogoShirtx from './../img/shirtx.png';
 const Cabecalho = styled.div`
   display: flex;
   align-items: center;
@@ -11,11 +12,15 @@ const Box1 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #a7a9ac;
+  background-color: black;
   flex-basis: 225px;
   height: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 `
+ const ImagemLogo = styled.img`
+  width: 100%;
+  margin: 0 10px 0 5px;
+` 
 
 const Box2 = styled.nav`
   display: flex;
@@ -79,7 +84,7 @@ export class Header extends Component {
       <Cabecalho>
 
         <Box1>
-          ADICIONAR LOGO 
+          <ImagemLogo src = {LogoShirtx}/>
         </Box1>
 
         <Box2>
