@@ -20,20 +20,67 @@ const Entrada = styled.input`
   margin: 0 0 20px 0;
 `
 
+const Entrada2 = styled.select`
+  border: 1px solid blue;
+  height: 25px;
+  margin: 0 0 20px 0;
+  width: 100%;
+  margin: 0;
+`
+
+const Op = styled.option`
+  border: 1px solid blue;
+  height: 25px;
+  margin: 0 0 20px 0;
+  width: 10px;
+`
+
 export class Filtro extends Component {
   render() {
     return (
       <MenuEsquerda>
         <h3>Filtragem</h3>
         <div>
+
           <Titulos>Valor mínimo:</Titulos>
-          <Entrada type="Number"/>
+          <Entrada 
+            type="Number"
+            placeholder="Preço mínimo"
+            value={this.props.minPrice}
+            onChange={this.props.atualizaMinPreco}
+          />
 
           <Titulos>Valor máximo:</Titulos>
-          <Entrada type="Number"/>
+          <Entrada 
+            type="Number"
+            placeholder="Preço máximo"
+            value={this.props.maxPrice}
+            onChange={this.props.atualizaMaxPreco}
+          />
 
           <Titulos>Busca por nome:</Titulos>
-          <Entrada type="text"/>
+          <Entrada
+            type="text"
+            placeholder="Buscar"
+            value={this.props.pesquisa}
+            onChange={this.props.atualizaPesquisa}
+          />
+
+        </div>
+
+        <h3>Ordenação</h3>
+        <div>
+
+          <Titulos>Ordenação de preço:</Titulos>
+          <Entrada2
+            name="order"
+            value={this.props.order}
+            onChange={this.props.updateOrder}
+          >
+            <Op value={1}>Crescente</Op>
+            <Op value={-1}>Decrescente</Op>
+         </Entrada2>
+
         </div>
       </MenuEsquerda>
     )
