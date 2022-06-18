@@ -5,7 +5,11 @@ import { Footer } from './components/footer/Footer';
 import { Filtro } from './components/filtro/Filtro';
 import { Carrinho } from './components/carrinho/Carrinho';
 
-import hamburguer from "./components/img/hamburguer.png";
+import camisas1 from './components/img/Camisa1.png'
+import camisas2 from './components/img/Camisa2.png'
+import camisas3 from './components/img/Camisa3.png'
+import camisas4 from './components/img/Camisa4.png'
+import camisas5 from './components/img/Camisa5.png'
 import { MenuCentral, Imagem, Botao, Card2, Titulo, Preco } from './components/lista/Styled'
 
 import lixeira from "./components/img/lixeira.png";
@@ -25,31 +29,31 @@ export default class App extends Component {
         id: 1,
         name: "Camisa 1",
         value: 10,
-        imageUrl: hamburguer,
+        imageUrl: camisas1,
       },
       {
         id: 2,
         name: "Camisa 2",
         value: 20,
-        imageUrl: hamburguer,
+        imageUrl: camisas2,
       },
       {
         id: 3,
         name: "Camisa 3",
         value: 30,
-        imageUrl: hamburguer,
+        imageUrl: camisas3,
       },
       {
         id: 4,
         name: "Camisa 4",
         value: 40,
-        imageUrl: hamburguer,
+        imageUrl: camisas4,
       },
       {
         id: 5,
         name: "Camisa 5",
         value: 50,
-        imageUrl: hamburguer,
+        imageUrl: camisas5,
       },
     ],
     carrinho: [],

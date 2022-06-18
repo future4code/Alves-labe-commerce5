@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import LogoShirtx from './../img/shirtx.png';
+// import LogoShirtx from './../img/shirtx.png';
+import LogoShirtx from './../img/shirtx-branco.png';
 const Cabecalho = styled.div`
   display: flex;
   align-items: center;
@@ -26,7 +27,7 @@ const Box2 = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #005288;
+  background-color: black;
   flex-grow: 1;
   height: 100%;
 `
@@ -34,7 +35,7 @@ const Box2 = styled.nav`
 const Box3 = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #a7a9ac;
+  background-color: black;
   flex-basis: 225px;
   height: 100%;
 `
@@ -58,22 +59,22 @@ const MenuLi = styled.nav`
 
 const Menua = styled.a`
   text-decoration: none;
-  color: #a7a9ac;
+  color: white;
   padding: 15px;
   font-size: 24px;
 `
 
 const MenuaLogar = styled.a`
   text-decoration: none;
-  color: #005288;
+  color: white;
   font-size: 22px;
 `
 
 const MenuaLogarRegistrar = styled.a`
   text-decoration: none;
-  color: #a7a9ac;
+  color: black;
   font-size: 22px;
-  background-color: #005288;
+  background-color: white;
   border-radius: 20px;
   padding: 7px;
 `

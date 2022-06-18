@@ -6,7 +6,8 @@ export const MenuCentral = styled.div`
   grid-template-rows: 1fr 1fr;
   row-gap: 10px;
   column-gap: 10px;
-  background-color: gray;
+  margin: 0 5px 0 5px;
+  background-color: white;
 `
 
 export const Imagem = styled.img`
@@ -16,20 +17,30 @@ export const Imagem = styled.img`
 export const Botao = styled.button`
   width: 150px;
   border: none;
-  background-color: orange;
-  color: black;
+  background-color: black;
+  color: white;
+  
   font-size: 20px;
   height: 25px;
   cursor: pointer;
   margin: 0;
-`
+  :hover{
+    box-shadow: 1px 1px 5px #006cff;
+  }
+  :active{
+    color: black;
+  background-color: white;
+
+  }
+  `
+
 
 export const Card2 = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px black;
+  box-shadow: 1px 1px 5px black;
   text-align: center;
   padding: 5px;
 `
