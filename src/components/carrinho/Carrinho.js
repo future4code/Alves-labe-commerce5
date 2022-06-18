@@ -29,7 +29,7 @@ export class Carrinho extends Component {
   render() {
     return (
       <MenuDireita>
-        <h3>Carrinhooo</h3>
+        <h3>Carrinho</h3>
           {this.props.carrinho.map( (camisa,index) => {
             return (
               
