@@ -6,7 +6,9 @@ import { Filtro } from './components/filtro/Filtro';
 import { Carrinho } from './components/carrinho/Carrinho';
 
 import hamburguer from "./components/img/hamburguer.png";
-import {MenuCentral, Imagem, Botao, Card2, Titulo, Preco} from './components/lista/Styled'
+import { MenuCentral, Imagem, Botao, Card2, Titulo, Preco } from './components/lista/Styled'
+
+import lixeira from "./components/img/lixeira.png";
 
 const Principal = styled.div`
   display: grid;
@@ -50,6 +52,7 @@ export default class App extends Component {
         imageUrl: hamburguer,
       },
     ],
+    carrinho: [],
     minPrice: "",
     maxPrice: "",
     pesquisa: "",
@@ -57,26 +60,42 @@ export default class App extends Component {
   }
 
   atualizaMinPreco = (event) => {
-    this.setState({minPrice: event.target.value})
+    this.setState({ minPrice: event.target.value })
   }
 
   atualizaMaxPreco = (event) => {
-    this.setState({maxPrice: event.target.value})
+    this.setState({ maxPrice: event.target.value })
   }
 
   atualizaPesquisa = (event) => {
-    this.setState({pesquisa: event.target.value})
+    this.setState({ pesquisa: event.target.value })
   }
 
   updateOrder = (event) => {
-    this.setState({order: event.target.value})
+    this.setState({ order: event.target.value })
   }
 
-  render () {
+  removerItem = (event) => {
+    // preventDefault()
+    console.log('Foi clicado no botão remover')
+  }
+
+  atualizaCarrinho = (event) => {
+    const novoObjeto = {
+      id: event.target.id,
+      name: event.target.name,
+      value: event.target.value,
+      repeticao: 1
+    }
+    const novoCarrinho = [...this.state.carrinho, novoObjeto];
+    this.setState({ carrinho: novoCarrinho });
+  }
+
+  render() {
     return (
       <Principal>
         <Header />
-        <Filtro 
+        <Filtro
           atualizaMinPreco={this.atualizaMinPreco}
           minPrice={this.state.minPrice}
           atualizaMaxPreco={this.atualizaMaxPreco}
@@ -84,38 +103,52 @@ export default class App extends Component {
           atualizaPesquisa={this.atualizaPesquisa}
           pesquisa={this.state.pesquisa}
           updateOrder={this.updateOrder}
-          order={this.state.order}          
+          order={this.state.order}
         />
 
         <MenuCentral>
-          {this.state.camisas.filter( camisa => {
+          {this.state.camisas.filter(camisa => {
             // Filtragem valor mínimo
             return this.state.minPrice === "" || camisa.value >= this.state.minPrice
-          }).filter( camisa => {
+          }).filter(camisa => {
             // Filtragem valor máximo
             return this.state.maxPrice === "" || camisa.value <= this.state.maxPrice
-          }).filter( camisa => {
+          }).filter(camisa => {
             // Filtragem pelo nome
             return camisa.name.toLowerCase().includes(this.state.pesquisa.toLowerCase())
-          }).sort( (currentJob, nextJob) => {
+          }).sort((currentJob, nextJob) => {
             return this.state.order * (currentJob.value - nextJob.value)
           }).map(camisa => {
             return (
               <Card2>
-                <Imagem src={camisa.imageUrl}/>
+                <Imagem src={camisa.imageUrl} />
                 <Titulo>{camisa.name}</Titulo>
-                <Preco>{camisa.value}</Preco>
-                <Botao>Comprar</Botao>
+                <Preco><strong>{`R$ ${camisa.value}`}</strong></Preco>
+                <Botao id={camisa.id} name={camisa.name} value={camisa.value} onClick={this.atualizaCarrinho}>Comprar</Botao>
               </Card2>
             )
           })
           }
         </MenuCentral>
 
-        <Carrinho />
+        <Carrinho
+          carrinho={this.state.carrinho}
+          removerItem={this.removerItem}
+        />
+
+        
+        {/* <h3>Carrinho</h3>
+        {this.state.carrinho.map(camisa => {
+          return (
+            <>
+              {camisa.name}
+              <button id={camisa.id} onClick={this.removerItem}>{<img src={lixeira} />}</button>
+            </>
+          )
+        })} */}
+
         <Footer />
       </Principal>
     );
-
   }
 }
