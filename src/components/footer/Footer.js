@@ -56,7 +56,6 @@ const Redes = styled.div`
 `
 
 const TextoSigam = styled.p`
-  /* text-left: center; */
   margin: 0 0 3px 0;
   color: #a7a9ac;
 `

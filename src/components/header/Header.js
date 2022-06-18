@@ -90,16 +90,16 @@ export class Header extends Component {
         <Box2>
           <MenuUl>
             <MenuLi>
-              <Menua href="./index.html">Início</Menua>
+              <Menua>Início</Menua>
             </MenuLi>
             <MenuLi>
-              <Menua href="./fazer-pedido.html">Fazer pedido</Menua>
+              <Menua>Fazer pedido</Menua>
             </MenuLi>
             <MenuLi>
-              <Menua href="./quem-somos.html">Quem somos</Menua>
+              <Menua>Quem somos</Menua>
             </MenuLi>
             <MenuLi>
-              <Menua href="./faq.html">FAQ</Menua>
+              <Menua>FAQ</Menua>
             </MenuLi>
           </MenuUl>
         </Box2>
@@ -107,10 +107,10 @@ export class Header extends Component {
         <Box3>
           <MenuUlLogar>
             <MenuLi>
-              <MenuaLogar href="./login.html" class="login" target="_blank">Entrar</MenuaLogar>
+              <MenuaLogar>Entrar</MenuaLogar>
             </MenuLi>
             <MenuLi>
-              <MenuaLogarRegistrar href="./registrar.html" class="destaque" target="_blank">Registrar</MenuaLogarRegistrar>
+              <MenuaLogarRegistrar>Registrar</MenuaLogarRegistrar>
             </MenuLi>
           </MenuUlLogar>
         </Box3>

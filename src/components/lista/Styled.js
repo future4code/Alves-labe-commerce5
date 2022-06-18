@@ -4,8 +4,8 @@ export const MenuCentral = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  row-gap: 20px;
-  column-gap: 20px;
+  row-gap: 10px;
+  column-gap: 10px;
   background-color: gray;
 `
 
@@ -29,7 +29,6 @@ export const Card2 = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 2px 2px 5px darkgray; */
   border: solid 1px black;
   text-align: center;
   padding: 5px;
