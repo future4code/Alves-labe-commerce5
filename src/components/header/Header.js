@@ -16,12 +16,18 @@ const Box1 = styled.div`
   background-color: black;
   flex-basis: 225px;
   height: 100%;
-  /* border: 1px solid black; */
-`
- const ImagemLogo = styled.img`
+  `
+const ImagemLogo = styled.img`
   width: 100%;
   margin: 0 10px 0 5px;
-` 
+  @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 0;
+    width: 100px;
+  }
+  `
 
 const Box2 = styled.nav`
   display: flex;
@@ -30,7 +36,7 @@ const Box2 = styled.nav`
   background-color: black;
   flex-grow: 1;
   height: 100%;
-`
+  `
 
 const Box3 = styled.div`
   display: flex;
@@ -38,33 +44,37 @@ const Box3 = styled.div`
   background-color: black;
   flex-basis: 225px;
   height: 100%;
-`
+  `
 
 const MenuUl = styled.nav`
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
-`
+  `
 
 const MenuUlLogar = styled.nav`
   display: flex;
   align-items: center;
-`
+  `
 
 const MenuLi = styled.nav`
   list-style: none;
   margin: 10px
-`
-
-const Menua = styled.a`
+  `
+  
+  const Menua = styled.a`
   text-decoration: none;
   color: white;
   padding: 15px;
   font-size: 24px;
-`
-
-const MenuaLogar = styled.a`
+  @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+  font-size: 16px;
+  text-align: center;
+  }
+  `
+  
+  const MenuaLogar = styled.a`
   text-decoration: none;
   color: white;
   font-size: 22px;
@@ -85,14 +95,11 @@ export class Header extends Component {
       <Cabecalho>
 
         <Box1>
-          <ImagemLogo src = {LogoShirtx}/>
+          <ImagemLogo src={LogoShirtx} />
         </Box1>
 
         <Box2>
           <MenuUl>
-            <MenuLi>
-              <Menua>Início</Menua>
-            </MenuLi>
             <MenuLi>
               <Menua>Fazer pedido</Menua>
             </MenuLi>
