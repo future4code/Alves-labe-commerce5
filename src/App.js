@@ -12,7 +12,7 @@ import camisas4 from './components/img/Camisa4.png'
 import camisas5 from './components/img/Camisa5.png'
 import { MenuCentral, Imagem, Botao, Card2, Titulo, Preco } from './components/lista/Styled'
 
-import lixeira from "./components/img/lixeira.png";
+// import lixeira from "./components/img/lixeira.png";
 
 const Principal = styled.div`
   display: grid;
@@ -60,7 +60,7 @@ export default class App extends Component {
     minPrice: "",
     maxPrice: "",
     pesquisa: "",
-    order: 1
+    order: 1,
   }
 
   atualizaMinPreco = (event) => {
@@ -80,19 +80,64 @@ export default class App extends Component {
   }
 
   removerItem = (event) => {
-    // preventDefault()
-    console.log('Foi clicado no botão remover')
+    let repetido = false;
+    this.state.carrinho.forEach( camisa => {
+      if (camisa.id === event.target.id && camisa.repeticao > 1) repetido = true
+    })
+    
+    if (!repetido) {
+      const novoCarrinho = this.state.carrinho.filter(camisa => {
+        return camisa.id !== event.target.id
+      })
+      this.setState({ carrinho: novoCarrinho });
+    } else {
+      const novoCarrinho = this.state.carrinho.map( camisa => {
+        if (camisa.id === event.target.id) {
+          const auxiliar = camisa.repeticao - 1;
+          const novoObjeto = {
+            ...camisa,
+            repeticao: auxiliar
+          }
+          return novoObjeto
+        } else {
+          return camisa
+        }
+      })
+      this.setState({carrinho: novoCarrinho}); 
+    }
   }
 
   atualizaCarrinho = (event) => {
-    const novoObjeto = {
-      id: event.target.id,
-      name: event.target.name,
-      value: event.target.value,
-      repeticao: 1
+    let repetido = false;
+    this.state.carrinho.forEach( camisa => {
+      if (camisa.id === event.target.id) repetido = true
+    })
+
+    if (!repetido) {
+      const novoObjeto = {
+        id: event.target.id,
+        name: event.target.name,
+        value: event.target.value,
+        repeticao: 1
+      }
+
+      const novoCarrinho = [...this.state.carrinho, novoObjeto]
+      this.setState({ carrinho: novoCarrinho });
+    } else {
+      const novoCarrinho = this.state.carrinho.map( camisa => {
+        if (camisa.id === event.target.id) {
+          const auxiliar = camisa.repeticao + 1;
+          const novoObjeto = {
+            ...camisa,
+            repeticao: auxiliar
+          }
+          return novoObjeto
+        } else {
+          return camisa
+        }
+      })
+      this.setState({carrinho: novoCarrinho});  
     }
-    const novoCarrinho = [...this.state.carrinho, novoObjeto];
-    this.setState({ carrinho: novoCarrinho });
   }
 
   render() {
@@ -139,17 +184,6 @@ export default class App extends Component {
           carrinho={this.state.carrinho}
           removerItem={this.removerItem}
         />
-
-        
-        {/* <h3>Carrinho</h3>
-        {this.state.carrinho.map(camisa => {
-          return (
-            <>
-              {camisa.name}
-              <button id={camisa.id} onClick={this.removerItem}>{<img src={lixeira} />}</button>
-            </>
-          )
-        })} */}
 
         <Footer />
       </Principal>
