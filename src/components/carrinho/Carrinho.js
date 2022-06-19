@@ -48,7 +48,6 @@ export class Carrinho extends Component {
             {soma !== 0 ? `Valor total: R$ ${soma.toFixed(2)}` : ''}
           </strong>
         </ValorTotal>
-
       </MenuDireita>
     )
   }

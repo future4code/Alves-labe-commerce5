@@ -28,31 +28,31 @@ export default class App extends Component {
       {
         id: 1,
         name: "Camisa 1",
-        value: 59.99,
+        value: 69.99,
         imageUrl: camisas1,
       },
       {
         id: 2,
         name: "Camisa 2",
-        value: 59.99,
+        value: 74.99,
         imageUrl: camisas2,
       },
       {
         id: 3,
         name: "Camisa 3",
-        value: 79.99,
+        value: 74.99,
         imageUrl: camisas3,
       },
       {
         id: 4,
         name: "Camisa 4",
-        value: 89.99,
+        value: 59.99,
         imageUrl: camisas4,
       },
       {
         id: 5,
         name: "Camisa 5",
-        value: 69.99,
+        value: 119.99,
         imageUrl: camisas5,
       },
       {
@@ -85,6 +85,36 @@ export default class App extends Component {
         value: 94.99,
         imageUrl: camisas5,
       },
+      {
+        id: 6,
+        name: "Camisa 6",
+        value: 104.99,
+        imageUrl: camisas4,
+      },
+      {
+        id: 7,
+        name: "Camisa 7",
+        value: 99.99,
+        imageUrl: camisas2,
+      },
+      {
+        id: 8,
+        name: "Camisa 8",
+        value: 89.99,
+        imageUrl: camisas3,
+      },
+      {
+        id: 9,
+        name: "Camisa 9",
+        value: 94.99,
+        imageUrl: camisas1,
+      },
+      {
+        id: 10,
+        name: "Camisa 10",
+        value: 54.99,
+        imageUrl: camisas3,
+      },
     ],
     carrinho: [],
     minPrice: "",
@@ -105,7 +135,7 @@ export default class App extends Component {
     this.setState({ pesquisa: event.target.value })
   }
 
-  atualizaOrder = (event) => {
+  atualizaOrdenacao = (event) => {
     this.setState({ ordenacao: event.target.value })
   }
 
@@ -181,7 +211,7 @@ export default class App extends Component {
           maxPrice={this.state.maxPrice}
           atualizaPesquisa={this.atualizaPesquisa}
           pesquisa={this.state.pesquisa}
-          atualizaOrder={this.atualizaOrder}
+          atualizaOrdenacao={this.atualizaOrdenacao}
           ordenacao={this.state.ordenacao}
         />
 

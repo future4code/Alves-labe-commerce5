@@ -75,7 +75,7 @@ export class Filtro extends Component {
           <Entrada2
             name="ordenacao"
             value={this.props.ordenacao}
-            onChange={this.props.atualizaOrder}
+            onChange={this.props.atualizaOrdenacao}
           >
             <Op value={1}>Crescente</Op>
             <Op value={-1}>Decrescente</Op>
