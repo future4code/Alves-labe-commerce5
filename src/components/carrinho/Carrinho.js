@@ -32,23 +32,23 @@ export class Carrinho extends Component {
     return (
       <MenuDireita>
         <h3>Carrinho</h3>
-          {this.props.carrinho.map( camisa => {
-            soma = soma + camisa.repeticao * camisa.value;
-            return (
-              <ItensCarrinho >
-                {`${camisa.repeticao}x `}
-                {camisa.name}
-                <BotaoRemover id={camisa.id} onClick={this.props.removerItem}>Excluir</BotaoRemover>
-              </ItensCarrinho>
-            )
-          })}
+        {this.props.carrinho.map(camisa => {
+          soma = soma + camisa.repeticao * camisa.value;
+          return (
+            <ItensCarrinho >
+              {`${camisa.repeticao}x `}
+              {camisa.name}
+              <BotaoRemover id={camisa.id} onClick={this.props.removerItem}>Excluir</BotaoRemover>
+            </ItensCarrinho>
+          )
+        })}
 
-          <ValorTotal>
-            <strong>
-              {soma !== 0 ? `Valor total: R$ ${soma}` : ''}
-            </strong>
-          </ValorTotal>
-          
+        <ValorTotal>
+          <strong>
+            {soma !== 0 ? `Valor total: R$ ${soma.toFixed(2)}` : ''}
+          </strong>
+        </ValorTotal>
+
       </MenuDireita>
     )
   }

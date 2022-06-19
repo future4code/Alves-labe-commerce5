@@ -28,31 +28,61 @@ export default class App extends Component {
       {
         id: 1,
         name: "Camisa 1",
-        value: 10,
+        value: 59.99,
         imageUrl: camisas1,
       },
       {
         id: 2,
         name: "Camisa 2",
-        value: 20,
+        value: 59.99,
         imageUrl: camisas2,
       },
       {
         id: 3,
         name: "Camisa 3",
-        value: 30,
+        value: 79.99,
         imageUrl: camisas3,
       },
       {
         id: 4,
         name: "Camisa 4",
-        value: 40,
+        value: 89.99,
         imageUrl: camisas4,
       },
       {
         id: 5,
         name: "Camisa 5",
-        value: 50,
+        value: 69.99,
+        imageUrl: camisas5,
+      },
+      {
+        id: 6,
+        name: "Camisa 6",
+        value: 79.99,
+        imageUrl: camisas1,
+      },
+      {
+        id: 7,
+        name: "Camisa 7",
+        value: 49.99,
+        imageUrl: camisas2,
+      },
+      {
+        id: 8,
+        name: "Camisa 8",
+        value: 89.99,
+        imageUrl: camisas3,
+      },
+      {
+        id: 9,
+        name: "Camisa 9",
+        value: 74.99,
+        imageUrl: camisas4,
+      },
+      {
+        id: 10,
+        name: "Camisa 10",
+        value: 94.99,
         imageUrl: camisas5,
       },
     ],
@@ -60,7 +90,7 @@ export default class App extends Component {
     minPrice: "",
     maxPrice: "",
     pesquisa: "",
-    order: 1,
+    ordenacao: 1,
   }
 
   atualizaMinPreco = (event) => {
@@ -75,23 +105,23 @@ export default class App extends Component {
     this.setState({ pesquisa: event.target.value })
   }
 
-  updateOrder = (event) => {
-    this.setState({ order: event.target.value })
+  atualizaOrder = (event) => {
+    this.setState({ ordenacao: event.target.value })
   }
 
   removerItem = (event) => {
     let repetido = false;
-    this.state.carrinho.forEach( camisa => {
+    this.state.carrinho.forEach(camisa => {
       if (camisa.id === event.target.id && camisa.repeticao > 1) repetido = true
     })
-    
+
     if (!repetido) {
       const novoCarrinho = this.state.carrinho.filter(camisa => {
         return camisa.id !== event.target.id
       })
       this.setState({ carrinho: novoCarrinho });
     } else {
-      const novoCarrinho = this.state.carrinho.map( camisa => {
+      const novoCarrinho = this.state.carrinho.map(camisa => {
         if (camisa.id === event.target.id) {
           const auxiliar = camisa.repeticao - 1;
           const novoObjeto = {
@@ -103,13 +133,13 @@ export default class App extends Component {
           return camisa
         }
       })
-      this.setState({carrinho: novoCarrinho}); 
+      this.setState({ carrinho: novoCarrinho });
     }
   }
 
   atualizaCarrinho = (event) => {
     let repetido = false;
-    this.state.carrinho.forEach( camisa => {
+    this.state.carrinho.forEach(camisa => {
       if (camisa.id === event.target.id) repetido = true
     })
 
@@ -124,7 +154,7 @@ export default class App extends Component {
       const novoCarrinho = [...this.state.carrinho, novoObjeto]
       this.setState({ carrinho: novoCarrinho });
     } else {
-      const novoCarrinho = this.state.carrinho.map( camisa => {
+      const novoCarrinho = this.state.carrinho.map(camisa => {
         if (camisa.id === event.target.id) {
           const auxiliar = camisa.repeticao + 1;
           const novoObjeto = {
@@ -136,7 +166,7 @@ export default class App extends Component {
           return camisa
         }
       })
-      this.setState({carrinho: novoCarrinho});  
+      this.setState({ carrinho: novoCarrinho });
     }
   }
 
@@ -151,8 +181,8 @@ export default class App extends Component {
           maxPrice={this.state.maxPrice}
           atualizaPesquisa={this.atualizaPesquisa}
           pesquisa={this.state.pesquisa}
-          updateOrder={this.updateOrder}
-          order={this.state.order}
+          atualizaOrder={this.atualizaOrder}
+          ordenacao={this.state.ordenacao}
         />
 
         <MenuCentral>
@@ -166,7 +196,7 @@ export default class App extends Component {
             // Filtragem pelo nome
             return camisa.name.toLowerCase().includes(this.state.pesquisa.toLowerCase())
           }).sort((currentJob, nextJob) => {
-            return this.state.order * (currentJob.value - nextJob.value)
+            return this.state.ordenacao * (currentJob.value - nextJob.value)
           }).map(camisa => {
             return (
               <Card2>
