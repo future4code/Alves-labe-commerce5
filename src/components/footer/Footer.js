@@ -11,7 +11,7 @@ const Rodape = styled.div`
   justify-content: space-between;
   align-items: center;
   grid-column: 1/-1;
-`
+  `
 
 const ImagemRedeSocial = styled.img`
   width: 25px;
@@ -21,7 +21,7 @@ const ImagemRedeSocial = styled.img`
     box-shadow: 1px 1px 5px white;
     cursor:pointer
   }
-`
+  `
 
 const TextoLogoGeral = styled.h4`
   display: flex;
@@ -30,40 +30,42 @@ const TextoLogoGeral = styled.h4`
   font-family: 'Comfortaa', cursive;
   margin: 0 0 0 20px;
   height: 50px;
-`
+  `
 
 const TextoLogo1 = styled.h4`
   background-color: white;
   padding: 5px 0 5px 5px;
   border-radius: 10px;
-`
+  `
 
 const TextoLogo2 = styled.h4`
   margin: 0 0 0 8px;
   color: #a7a9ac;
   font-family: 'Courier New', Courier, monospace;
-`
+  `
 
 const TextoCentral = styled.p`
 color: #a7a9ac;
+font-family: 'Courier New', Courier, monospace;
 `
 
 const SigamNos = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 20px 3px 0;
-`
+  `
 
 const Redes = styled.div`
   display: flex;
   justify-content: center;
   margin: 0;
-`
+  `
 
 const TextoSigam = styled.p`
   margin: 0 0 3px 0;
   color: #a7a9ac;
-`
+  font-family: 'Courier New', Courier, monospace;
+  `
 
 export class Footer extends Component {
   render() {
@@ -75,7 +77,7 @@ export class Footer extends Component {
             shirtX:
           </TextoLogo1>
           <TextoLogo2>
-            camisas leves que te fazem voar
+            Camisas leves que te fazem voar
           </TextoLogo2>
         </TextoLogoGeral>
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import lixeira from "./../img/lixeira.png";
 
 const MenuDireita = styled.div`
   display: flex;
@@ -21,7 +20,6 @@ const BotaoRemover = styled.button`
 `
 
 const ValorTotal = styled.div`
-  /* border-top: solid 1px black; */
   width: 90%;
   margin: 20px 0 0 5px;
 `
