@@ -28,39 +28,69 @@ export default class App extends Component {
       {
         id: 1,
         name: "Camisa 1",
-        value: 10,
+        value: 69.99,
         imageUrl: camisas1,
       },
       {
         id: 2,
         name: "Camisa 2",
-        value: 20,
+        value: 74.99,
         imageUrl: camisas2,
       },
       {
         id: 3,
         name: "Camisa 3",
-        value: 30,
+        value: 74.99,
         imageUrl: camisas3,
       },
       {
         id: 4,
         name: "Camisa 4",
-        value: 40,
+        value: 59.99,
         imageUrl: camisas4,
       },
       {
         id: 5,
         name: "Camisa 5",
-        value: 50,
+        value: 119.99,
         imageUrl: camisas5,
+      },
+      {
+        id: 6,
+        name: "Camisa 6",
+        value: 104.99,
+        imageUrl: camisas4,
+      },
+      {
+        id: 7,
+        name: "Camisa 7",
+        value: 99.99,
+        imageUrl: camisas2,
+      },
+      {
+        id: 8,
+        name: "Camisa 8",
+        value: 89.99,
+        imageUrl: camisas3,
+      },
+      {
+        id: 9,
+        name: "Camisa 9",
+        value: 94.99,
+        imageUrl: camisas1,
+      },
+      {
+        id: 10,
+        name: "Camisa 10",
+        value: 54.99,
+        imageUrl: camisas3,
       },
     ],
     carrinho: [],
     minPrice: "",
     maxPrice: "",
     pesquisa: "",
-    order: 1,
+    ordenacao: 1,
   }
 
   atualizaMinPreco = (event) => {
@@ -75,8 +105,8 @@ export default class App extends Component {
     this.setState({ pesquisa: event.target.value })
   }
 
-  updateOrder = (event) => {
-    this.setState({ order: event.target.value })
+  atualizaOrdenacao = (event) => {
+    this.setState({ ordenacao: event.target.value })
   }
 
   removerItem = (event) => {
@@ -151,8 +181,8 @@ export default class App extends Component {
           maxPrice={this.state.maxPrice}
           atualizaPesquisa={this.atualizaPesquisa}
           pesquisa={this.state.pesquisa}
-          updateOrder={this.updateOrder}
-          order={this.state.order}
+          atualizaOrdenacao={this.atualizaOrdenacao}
+          ordenacao={this.state.ordenacao}
         />
 
         <MenuCentral>
@@ -166,7 +196,7 @@ export default class App extends Component {
             // Filtragem pelo nome
             return camisa.name.toLowerCase().includes(this.state.pesquisa.toLowerCase())
           }).sort((currentJob, nextJob) => {
-            return this.state.order * (currentJob.value - nextJob.value)
+            return this.state.ordenacao * (currentJob.value - nextJob.value)
           }).map(camisa => {
             return (
               <Card2>

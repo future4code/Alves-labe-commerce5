@@ -19,7 +19,7 @@ const Box1 = styled.div`
   `
 const ImagemLogo = styled.img`
   width: 100%;
-  margin: 0 10px 0 5px;
+  margin: 0 10px 0 40px;
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
     display: flex;
     flex-direction: column;

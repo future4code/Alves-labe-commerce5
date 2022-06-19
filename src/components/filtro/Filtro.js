@@ -24,7 +24,7 @@ const Entrada2 = styled.select`
   border: 1px solid blue;
   height: 25px;
   margin: 0 0 20px 0;
-  width: 100%;
+  width: 175px;
   margin: 0;
 `
 
@@ -73,9 +73,9 @@ export class Filtro extends Component {
 
           <Titulos>Ordenação de preço:</Titulos>
           <Entrada2
-            name="order"
-            value={this.props.order}
-            onChange={this.props.updateOrder}
+            name="ordenacao"
+            value={this.props.ordenacao}
+            onChange={this.props.atualizaOrdenacao}
           >
             <Op value={1}>Crescente</Op>
             <Op value={-1}>Decrescente</Op>
