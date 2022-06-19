@@ -19,7 +19,7 @@ const Box1 = styled.div`
   `
 const ImagemLogo = styled.img`
   width: 100%;
-  margin: 0 10px 0 40px;
+  margin: 0 20px 0 50px;
   @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
     display: flex;
     flex-direction: column;
@@ -62,8 +62,8 @@ const MenuLi = styled.nav`
   list-style: none;
   margin: 10px
   `
-  
-  const Menua = styled.a`
+
+const Menua = styled.a`
   text-decoration: none;
   color: white;
   padding: 15px;
@@ -73,8 +73,8 @@ const MenuLi = styled.nav`
   text-align: center;
   }
   `
-  
-  const MenuaLogar = styled.a`
+
+const MenuaLogar = styled.a`
   text-decoration: none;
   color: white;
   font-size: 22px;

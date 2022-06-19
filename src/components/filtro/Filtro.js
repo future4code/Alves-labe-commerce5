@@ -43,7 +43,7 @@ export class Filtro extends Component {
         <div>
 
           <Titulos>Valor mínimo:</Titulos>
-          <Entrada 
+          <Entrada
             type="Number"
             placeholder="Preço mínimo"
             value={this.props.minPrice}
@@ -51,7 +51,7 @@ export class Filtro extends Component {
           />
 
           <Titulos>Valor máximo:</Titulos>
-          <Entrada 
+          <Entrada
             type="Number"
             placeholder="Preço máximo"
             value={this.props.maxPrice}
@@ -79,7 +79,7 @@ export class Filtro extends Component {
           >
             <Op value={1}>Crescente</Op>
             <Op value={-1}>Decrescente</Op>
-         </Entrada2>
+          </Entrada2>
 
         </div>
       </MenuEsquerda>

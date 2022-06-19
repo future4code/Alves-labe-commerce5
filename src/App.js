@@ -58,6 +58,36 @@ export default class App extends Component {
       {
         id: 6,
         name: "Camisa 6",
+        value: 79.99,
+        imageUrl: camisas1,
+      },
+      {
+        id: 7,
+        name: "Camisa 7",
+        value: 49.99,
+        imageUrl: camisas2,
+      },
+      {
+        id: 8,
+        name: "Camisa 8",
+        value: 89.99,
+        imageUrl: camisas3,
+      },
+      {
+        id: 9,
+        name: "Camisa 9",
+        value: 74.99,
+        imageUrl: camisas4,
+      },
+      {
+        id: 10,
+        name: "Camisa 10",
+        value: 94.99,
+        imageUrl: camisas5,
+      },
+      {
+        id: 6,
+        name: "Camisa 6",
         value: 104.99,
         imageUrl: camisas4,
       },
@@ -111,17 +141,17 @@ export default class App extends Component {
 
   removerItem = (event) => {
     let repetido = false;
-    this.state.carrinho.forEach( camisa => {
+    this.state.carrinho.forEach(camisa => {
       if (camisa.id === event.target.id && camisa.repeticao > 1) repetido = true
     })
-    
+
     if (!repetido) {
       const novoCarrinho = this.state.carrinho.filter(camisa => {
         return camisa.id !== event.target.id
       })
       this.setState({ carrinho: novoCarrinho });
     } else {
-      const novoCarrinho = this.state.carrinho.map( camisa => {
+      const novoCarrinho = this.state.carrinho.map(camisa => {
         if (camisa.id === event.target.id) {
           const auxiliar = camisa.repeticao - 1;
           const novoObjeto = {
@@ -133,13 +163,13 @@ export default class App extends Component {
           return camisa
         }
       })
-      this.setState({carrinho: novoCarrinho}); 
+      this.setState({ carrinho: novoCarrinho });
     }
   }
 
   atualizaCarrinho = (event) => {
     let repetido = false;
-    this.state.carrinho.forEach( camisa => {
+    this.state.carrinho.forEach(camisa => {
       if (camisa.id === event.target.id) repetido = true
     })
 
@@ -154,7 +184,7 @@ export default class App extends Component {
       const novoCarrinho = [...this.state.carrinho, novoObjeto]
       this.setState({ carrinho: novoCarrinho });
     } else {
-      const novoCarrinho = this.state.carrinho.map( camisa => {
+      const novoCarrinho = this.state.carrinho.map(camisa => {
         if (camisa.id === event.target.id) {
           const auxiliar = camisa.repeticao + 1;
           const novoObjeto = {
@@ -166,7 +196,7 @@ export default class App extends Component {
           return camisa
         }
       })
-      this.setState({carrinho: novoCarrinho});  
+      this.setState({ carrinho: novoCarrinho });
     }
   }
 
