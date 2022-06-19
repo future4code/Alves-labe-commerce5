@@ -66,8 +66,8 @@ const TextoSigam = styled.p`
 `
 
 export class Footer extends Component {
-	render() {
-		return (
+  render() {
+    return (
       <Rodape>
 
         <TextoLogoGeral>
@@ -90,12 +90,12 @@ export class Footer extends Component {
             <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><ImagemRedeSocial src={youtube} /></a>
             <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><ImagemRedeSocial src={twitter} /></a>
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><ImagemRedeSocial src={facebook} /></a>
-            
+
           </Redes>
         </SigamNos>
 
       </Rodape>
     )
-	}
+  }
 }
 
