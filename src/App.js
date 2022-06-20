@@ -10,6 +10,11 @@ import camisas2 from './components/img/Camisa2.png'
 import camisas3 from './components/img/Camisa3.png'
 import camisas4 from './components/img/Camisa4.png'
 import camisas5 from './components/img/Camisa5.png'
+import camisas6 from './components/img/Camisa6.png'
+import camisas7 from './components/img/Camisa7.png'
+import camisas8 from './components/img/Camisa8.png'
+import camisas9 from './components/img/Camisa9.png'
+import camisas10 from './components/img/Camisa10.png'
 import { MenuCentral, Imagem, Botao, Card2, Titulo, Preco } from './components/lista/Styled'
 
 // import lixeira from "./components/img/lixeira.png";
@@ -20,6 +25,13 @@ const Principal = styled.div`
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 225px 1fr 225px;
   box-sizing: border-box;
+  @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+    
+    display: flex;
+    flex-direction: column;
+        align-items: unset;
+        width: 75vw;
+  }
 `
 
 export default class App extends Component {
@@ -28,19 +40,19 @@ export default class App extends Component {
       {
         id: 1,
         name: "Camisa 1",
-        value: 69.99,
+        value: 39.99,
         imageUrl: camisas1,
       },
       {
         id: 2,
         name: "Camisa 2",
-        value: 74.99,
+        value: 44.99,
         imageUrl: camisas2,
       },
       {
         id: 3,
         name: "Camisa 3",
-        value: 74.99,
+        value: 49.99,
         imageUrl: camisas3,
       },
       {
@@ -52,38 +64,38 @@ export default class App extends Component {
       {
         id: 5,
         name: "Camisa 5",
-        value: 119.99,
+        value: 69.99,
         imageUrl: camisas5,
       },
       {
         id: 6,
         name: "Camisa 6",
         value: 79.99,
-        imageUrl: camisas1,
+        imageUrl: camisas6,
       },
       {
         id: 7,
         name: "Camisa 7",
-        value: 49.99,
-        imageUrl: camisas2,
+        value: 89.99,
+        imageUrl: camisas7,
       },
       {
         id: 8,
         name: "Camisa 8",
-        value: 89.99,
-        imageUrl: camisas3,
+        value: 99.99,
+        imageUrl: camisas8,
       },
       {
         id: 9,
         name: "Camisa 9",
-        value: 74.99,
-        imageUrl: camisas4,
+        value: 109.99,
+        imageUrl: camisas9,
       },
       {
         id: 10,
         name: "Camisa 10",
-        value: 94.99,
-        imageUrl: camisas5,
+        value: 119.99,
+        imageUrl: camisas10,
       },
     ],
     carrinho: [],

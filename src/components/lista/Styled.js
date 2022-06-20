@@ -63,6 +63,9 @@ export const Card2 = styled.div`
   box-shadow: 1px 1px 5px black;
   text-align: center;
   padding: 5px;
+  @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+    width: 90%;
+  }
 `
 
 export const Titulo = styled.h3`
