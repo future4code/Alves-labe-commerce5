@@ -10,15 +10,24 @@ const MenuEsquerda = styled.div`
   background-color: whitesmoke;
 `
 
+const OrdenacaoTexto = styled.h3`
+@media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+    margin: 0;
+  }
+`
 const Titulos = styled.p`
   margin: 0 0 5px 0;
+  
 `
 
 const Entrada = styled.input`
   border: 1px solid blue;
   height: 25px;
   margin: 0 0 20px 0;
-`
+  @media screen and (min-device-width : 220px) and (max-device-width : 580px) {
+    margin: 0;
+  }
+  `
 
 const Entrada2 = styled.select`
   border: 1px solid blue;
@@ -26,7 +35,7 @@ const Entrada2 = styled.select`
   margin: 0 0 20px 0;
   width: 175px;
   margin: 0;
-`
+  `
 
 const Op = styled.option`
   border: 1px solid blue;
@@ -68,7 +77,7 @@ export class Filtro extends Component {
 
         </div>
 
-        <h3>Ordenação</h3>
+        <OrdenacaoTexto>Ordenação</OrdenacaoTexto>
         <div>
 
           <Titulos>Ordenação de preço:</Titulos>

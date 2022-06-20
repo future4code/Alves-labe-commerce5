@@ -27,6 +27,8 @@ const ImagemLogo = styled.img`
     padding: 16px;
     margin: 0;
     width: 100px;
+    align-items: center;
+    margin-left: 65px;
   }
   `
   
